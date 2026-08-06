@@ -64,7 +64,7 @@ function wp_cache_init() {
 	// and would try to load cache.php, causing "Cannot redeclare wp_cache_init()".
 	// Defer until after all wp_start_object_cache() calls are done.
 	if ( defined( 'LITESPEED_OC_FAILURE' ) ) {
-		add_action( 'muplugins_loaded', 'litespeed_oc_disable_ext_cache', -999 );
+        add_action( 'muplugins_loaded', 'litespeed_oc_disable_ext_cache', -999 );
 	}
 }
 
